@@ -1,3 +1,5 @@
+// Author: Jakub Kuska
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -18,6 +20,7 @@ typedef struct bdd_tree {
     struct bdd_node* m_root;
 } bdd_tree;
 
+// inspired from https://stackoverflow.com/questions/19305980/splitting-string-in-half-using-c
 char* split(char* root, int low, int high)
 {
     int length = high - low;
@@ -91,6 +94,7 @@ char* gen_vector(int exponent)
         char char_bin_val = bin_val + '0';
         tmp[i] = char_bin_val;
     }
+    
     
     return tmp;
 }
